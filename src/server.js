@@ -62,4 +62,21 @@ app.put("/book", (request, response) => {
 
 })
 
+app.delete("/book", (request, response) => {
+    function findBook(x) {
+        return x.title = request.body.title
+    }
+    const index = listOfBooks.findIndex(findBook)
+
+    listOfBooks.splice(index,1)
+
+    responseMessage = {
+        msg: "Book deleted",
+        book: request.body.title,
+        books: listOfBooks
+    }
+
+    response.send(responseMessage)
+})
+
 app.listen(5001, () => console.log("server listening on port 5001"))
