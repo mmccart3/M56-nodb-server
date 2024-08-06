@@ -1,0 +1,14 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "a mock database server using JS arrays of objects",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M J McCarthy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
