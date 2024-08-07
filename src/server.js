@@ -6,6 +6,7 @@ app.use(express.json());
 const listOfBooks = [];
 book_id = 1;
 
+// CREATE function
 app.post("/book", (request, response) => {
     
     console.log(request.body);
@@ -29,6 +30,7 @@ app.post("/book", (request, response) => {
     response.send(successResponse)
 });
 
+// READ function
 app.get("/book", (request, response) => {
     const successResponse = {
         message: "List of books is currently: ",
@@ -38,6 +40,7 @@ app.get("/book", (request, response) => {
     response.send(successResponse)
 })
 
+//UPDATE function
 app.put("/book", (request, response) => {
     function findBook(x) {
         return x.title === request.body.title
@@ -62,6 +65,7 @@ app.put("/book", (request, response) => {
 
 })
 
+// DELETE function
 app.delete("/book", (request, response) => {
     function findBook(x) {
         return x.title = request.body.title
